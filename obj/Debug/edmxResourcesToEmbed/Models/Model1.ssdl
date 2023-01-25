@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NPMDevDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="STUDENT1">
+    <Key>
+      <PropertyRef Name="STD_ID" />
+    </Key>
+    <Property Name="STD_ID" Type="int" Nullable="false" />
+    <Property Name="STD_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="COURSES" Type="varchar" MaxLength="50" />
+    <Property Name="STD_DOB" Type="date" />
+    <Property Name="CREATED_BY" Type="varchar" MaxLength="250" />
+    <Property Name="MODIFED_BY" Type="varchar" MaxLength="250" />
+    <Property Name="STD_ISDELETED" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="NPMDevDBModelStoreContainer">
+    <EntitySet Name="STUDENT1" EntityType="Self.STUDENT1" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

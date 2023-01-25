@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="NPMDevDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="STUDENT1">
+          <Key>
+            <PropertyRef Name="STD_ID" />
+          </Key>
+          <Property Name="STD_ID" Type="int" Nullable="false" />
+          <Property Name="STD_NAME" Type="varchar" MaxLength="50" />
+          <Property Name="COURSES" Type="varchar" MaxLength="50" />
+          <Property Name="STD_DOB" Type="date" />
+          <Property Name="CREATED_BY" Type="varchar" MaxLength="250" />
+          <Property Name="MODIFED_BY" Type="varchar" MaxLength="250" />
+          <Property Name="STD_ISDELETED" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="NPMDevDBModelStoreContainer">
+          <EntitySet Name="STUDENT1" EntityType="Self.STUDENT1" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NPMDevDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="STUDENT1">
+          <Key>
+            <PropertyRef Name="STD_ID" />
+          </Key>
+          <Property Name="STD_ID" Type="Int32" Nullable="false" />
+          <Property Name="STD_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="COURSES" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="STD_DOB" Type="DateTime" Precision="0" />
+          <Property Name="CREATED_BY" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="MODIFED_BY" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="STD_ISDELETED" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="NPMDevDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="STUDENT1" EntityType="Self.STUDENT1" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NPMDevDBModelStoreContainer" CdmEntityContainer="NPMDevDBEntities">
+          <EntitySetMapping Name="STUDENT1">
+            <EntityTypeMapping TypeName="NPMDevDBModel.STUDENT1">
+              <MappingFragment StoreEntitySet="STUDENT1">
+                <ScalarProperty Name="STD_ID" ColumnName="STD_ID" />
+                <ScalarProperty Name="STD_NAME" ColumnName="STD_NAME" />
+                <ScalarProperty Name="COURSES" ColumnName="COURSES" />
+                <ScalarProperty Name="STD_DOB" ColumnName="STD_DOB" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="MODIFED_BY" ColumnName="MODIFED_BY" />
+                <ScalarProperty Name="STD_ISDELETED" ColumnName="STD_ISDELETED" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NPMDevDBModelStoreContainer" CdmEntityContainer="NPMDevDBEntities">
+    <EntitySetMapping Name="STUDENT1">
+      <EntityTypeMapping TypeName="NPMDevDBModel.STUDENT1">
+        <MappingFragment StoreEntitySet="STUDENT1">
+          <ScalarProperty Name="STD_ID" ColumnName="STD_ID" />
+          <ScalarProperty Name="STD_NAME" ColumnName="STD_NAME" />
+          <ScalarProperty Name="COURSES" ColumnName="COURSES" />
+          <ScalarProperty Name="STD_DOB" ColumnName="STD_DOB" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="MODIFED_BY" ColumnName="MODIFED_BY" />
+          <ScalarProperty Name="STD_ISDELETED" ColumnName="STD_ISDELETED" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
